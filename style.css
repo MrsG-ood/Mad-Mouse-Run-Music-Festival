@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #000000;
+  color: #e7e4d9;
+  margin: 0;
+}
+
+.header {
+  color: #37dfdb;
+  font-family: "Staatliches", cursive;
+  font-size: 4rem;
+  padding: 2rem;
+  margin: 0;
+  text-shadow: 4px 4px 8px #000000;
+  letter-spacing: 0.25rem;
+  line-height: 3rem;
+}
+
+button {
+  width: 25vw;
+  height: 44px;
+  border-radius: 20px;
+  border: none;
+  color: #000000;
+  background-color: #6fdf37;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  box-shadow: 4px 4px 8px #000000;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 0.05rem;
+}
+
+.desc {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navigation {
+  display: none;
+}
+
+.cardimg {
+  width: 75vw;
+  margin-top: 1rem;
+}
+
+.card {
+  width: 75vw;
+}
+
+.jumbotron {
+  background-image: url("img/danny-howe-bn-D2bCvpik-unsplash.jpg");
+  background-color: #37dfdb;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 100vw;
+  z-index: -1;
+}
+
+.fa-css3-alt {
+  color: dodgerblue;
+}
+
+.fa-sass {
+  color: #c69;
+}
+
+.fa-html5 {
+  color: #f06529;
+}
+
+/*# sourceMappingURL=style.css.map */

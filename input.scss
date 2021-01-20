@@ -1,0 +1,99 @@
+// VARIABLES
+$font-heading:'Staatliches', cursive;
+$font-p:'Open Sans', sans-serif;
+$font-size-header: 4rem;
+$font-size-p:1rem;
+$font-size-title: 2rem;
+
+$color-main:#000000;
+$color-secondary: #e7e4d9;
+$color-accent:#37dfdb;
+$color-button:#6fdf37;
+
+$sass-color:#c69;
+$css3-color: dodgerblue;
+$html5-color:#f06529;
+
+$accessibility-min: 44px;
+
+
+$shadow-drop:4px 4px 8px $color-main;
+// BASE STYLING
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: $color-main;
+    color:$color-secondary;
+    margin:0;
+
+}
+
+.header{
+    color:$color-accent;
+    font-family: $font-heading;
+    font-size: $font-size-header;
+    padding:2rem;
+    margin: 0;
+   text-shadow:$shadow-drop;
+   letter-spacing: .25rem;
+   line-height: 3rem;
+}
+
+button{
+    width: 25vw;
+    height: $accessibility-min;
+    border-radius: 20px;
+    border: none;
+    color: $color-main;
+    background-color: $color-button;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    box-shadow: $shadow-drop;
+    text-align: center;
+    font-family:$font-heading;
+    letter-spacing: .05rem;
+}
+.desc{
+    font-family:$font-p;
+}
+.navigation{
+    display: none;
+}
+
+// Class Styling
+.cardimg{
+    width: 75vw;
+    margin-top: 1rem;
+}
+.card{
+    width:75vw;
+    
+}
+.jumbotron{
+    background-image: url("img/danny-howe-bn-D2bCvpik-unsplash.jpg");
+    background-color:$color-accent;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 100vw;
+    z-index: -1;
+  
+}
+
+
+// ICON on footer
+
+.fa-css3-alt{
+    color:$css3-color;
+}
+.fa-sass{
+   color: $sass-color;
+}
+.fa-html5{
+    color:$html5-color;
+}
