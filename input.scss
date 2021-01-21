@@ -1,4 +1,6 @@
+// =========================================
 // VARIABLES
+// =========================================
 $font-heading:'Staatliches', cursive;
 $font-p:'Open Sans', sans-serif;
 $font-size-header: 4rem;
@@ -6,6 +8,7 @@ $font-size-p:1rem;
 $font-size-title: 2rem;
 
 $color-main:#000000;
+$opaque:rgba(0, 0, 0, 0.7 );
 $color-secondary: #e7e4d9;
 $color-accent:#37dfdb;
 $color-button:#6fdf37;
@@ -16,9 +19,62 @@ $html5-color:#f06529;
 
 $accessibility-min: 44px;
 
+$halfRem: .5rem;
 
-$shadow-drop:4px 4px 8px $color-main;
-// BASE STYLING
+
+
+$shadow-drop:5px 5px 10px $color-main;
+// =========================================
+// @mixins  use @include to use the mixin
+// =========================================
+
+@mixin flexCenter{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 100vw;
+}
+@mixin  cardGrid {
+    display: grid;
+    grid-template-rows:auto auto auto;
+    grid-template-columns: auto;
+    grid-gap: 2px;
+    justify-items: center;
+    align-items: center;
+}
+@mixin reset{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+@mixin signUpBtn{
+    border-radius: 20px;
+    border: none;
+    color: $color-main;
+    background-color: $color-button;
+    font-weight: bold;
+    box-shadow: $shadow-drop;
+    text-align: center;
+    font-family:$font-p;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+@mixin centerPadding{
+    padding-left: .5rem;
+    padding-right:.5rem;
+}
+
+@mixin accessibilityPx{
+    min-height: 44px;
+    min-width: 44px;
+}
+
+// =========================================
+// Base Styling
+// =========================================
 *{
     box-sizing: border-box;
 }
@@ -28,53 +84,79 @@ body{
     background-color: $color-main;
     color:$color-secondary;
     margin:0;
-
 }
 
 .header{
     color:$color-accent;
     font-family: $font-heading;
     font-size: $font-size-header;
-    padding:2rem;
+    padding-top:3rem;
     margin: 0;
-   text-shadow:$shadow-drop;
-   letter-spacing: .25rem;
-   line-height: 3rem;
+    text-shadow:$shadow-drop;
+    letter-spacing: .25rem;
+    line-height: 4rem;
 }
-
-button{
-    width: 25vw;
-    height: $accessibility-min;
-    border-radius: 20px;
-    border: none;
-    color: $color-main;
-    background-color: $color-button;
-    font-weight: bold;
-    padding: 1rem 1rem;
-    box-shadow: $shadow-drop;
+p{
+    font-size: .5rem;
+    font-family: $font-p;
     text-align: center;
-    font-family:$font-heading;
-    letter-spacing: .05rem;
+}
+h2{
+    margin: 0;
+}
+img{
+    margin:0;
+}
+.topbtn{
+    @include signUpBtn;
+    margin-top: 2rem;
+    height: $accessibility-min;
+    max-width:150px;
+    @include accessibilityPx();
+}
+.longbtn{
+    @include signUpBtn;
+    width: 30vw;
+    max-width:175vw;
+    margin-bottom: 1rem;
+    @include accessibilityPx();
 }
 .desc{
     font-family:$font-p;
+    background-color: $opaque;
 }
 .navigation{
     display: none;
 }
-
+.centerme{
+    margin:auto;
+}
+footer{
+    margin-top:1rem;
+}
+// =========================================
 // Class Styling
+// =========================================
 .cardimg{
-    width: 75vw;
-    margin-top: 1rem;
+    width: 60vw;
+    max-width: 450px;
+   margin:1rem;
 }
 .card{
+    // margin-top: 2rem;
     width:75vw;
-    
+    text-align: center;
+    @include flexCenter;
+}
+.eachCard{
+    @include cardGrid;
+    border: solid 3px grey;
+    margin:2rem;
 }
 .jumbotron{
     background-image: url("img/danny-howe-bn-D2bCvpik-unsplash.jpg");
     background-color:$color-accent;
+    box-shadow: 0px 0px 10px 20px  black inset;
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -86,14 +168,32 @@ button{
 }
 
 
-// ICON on footer
+// =========================================
+// Footer Icons
+// =========================================
 
-.fa-css3-alt{
-    color:$css3-color;
+footer{
+    text-align: center;
+    margin-bottom: 1rem;
+   @include flexCenter();
+   @include centerPadding;
+    .fa-hand-holding-heart{
+        color:hotpink;
+    }
+    .fa-css3-alt{
+        color:$css3-color;
+    }
+    .fa-sass{
+    color: $sass-color;
+    }
+    .fa-html5{
+        color:$html5-color;
+    }
 }
-.fa-sass{
-   color: $sass-color;
-}
-.fa-html5{
-    color:$html5-color;
-}
+
+
+
+
+// =========================================
+// Placeholder for @extend
+// =========================================
