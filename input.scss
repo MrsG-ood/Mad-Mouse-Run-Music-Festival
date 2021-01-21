@@ -11,6 +11,7 @@ $color-main:#000000;
 $opaque:rgba(0, 0, 0, 0.7 );
 $color-secondary: #e7e4d9;
 $color-accent:#37dfdb;
+$color-accent-dark:#165756;
 $color-button:#6fdf37;
 
 $sass-color:#c69;
@@ -32,8 +33,7 @@ $shadow-drop:5px 5px 10px $color-main;
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
     text-align: center;
     width: 100vw;
 }
@@ -61,6 +61,7 @@ $shadow-drop:5px 5px 10px $color-main;
     font-family:$font-p;
     font-size: 1rem;
     text-transform: capitalize;
+    max-width:200px;
 }
 @mixin centerPadding{
     padding-left: .5rem;
@@ -109,15 +110,14 @@ img{
 }
 .topbtn{
     @include signUpBtn;
-    margin-top: 2rem;
+    margin-top: 1rem;
     height: $accessibility-min;
-    max-width:150px;
     @include accessibilityPx();
 }
 .longbtn{
     @include signUpBtn;
     width: 30vw;
-    max-width:175vw;
+    // max-width:175vw;
     margin-bottom: 1rem;
     @include accessibilityPx();
 }
@@ -142,16 +142,28 @@ footer{
     max-width: 450px;
    margin:1rem;
 }
+article{
+    padding:1rem;
+    font-family: $font-p;
+}
+.title{
+    font-family:$font-heading;
+    letter-spacing: .25rem;
+    background-color: $color-accent;
+    color: $color-main;
+    @include centerPadding();
+}
 .card{
-    // margin-top: 2rem;
     width:75vw;
     text-align: center;
     @include flexCenter;
+    margin-top:1rem;
 }
 .eachCard{
     @include cardGrid;
-    border: solid 3px grey;
     margin:2rem;
+    border: 5px solid $color-accent-dark;
+   max-width:500px;
 }
 .jumbotron{
     background-image: url("img/danny-howe-bn-D2bCvpik-unsplash.jpg");
@@ -188,6 +200,9 @@ footer{
     }
     .fa-html5{
         color:$html5-color;
+    }
+    .made{
+        font-size: 1.25rem;
     }
 }
 

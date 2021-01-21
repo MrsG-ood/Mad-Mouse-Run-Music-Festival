@@ -45,9 +45,9 @@ img {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   text-transform: capitalize;
-  margin-top: 2rem;
+  max-width: 200px;
+  margin-top: 1rem;
   height: 44px;
-  max-width: 150px;
   min-height: 44px;
   min-width: 44px;
 }
@@ -63,8 +63,8 @@ img {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   text-transform: capitalize;
+  max-width: 200px;
   width: 30vw;
-  max-width: 175vw;
   margin-bottom: 1rem;
   min-height: 44px;
   min-width: 44px;
@@ -93,16 +93,30 @@ footer {
   margin: 1rem;
 }
 
+article {
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.title {
+  font-family: "Staatliches", cursive;
+  letter-spacing: 0.25rem;
+  background-color: #37dfdb;
+  color: #000000;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .card {
   width: 75vw;
   text-align: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
   text-align: center;
   width: 100vw;
+  margin-top: 1rem;
 }
 
 .eachCard {
@@ -112,8 +126,9 @@ footer {
   grid-gap: 2px;
   justify-items: center;
   align-items: center;
-  border: solid 3px grey;
   margin: 2rem;
+  border: 5px solid #165756;
+  max-width: 500px;
 }
 
 .jumbotron {
@@ -135,8 +150,7 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
   text-align: center;
   width: 100vw;
   padding-left: 0.5rem;
@@ -153,6 +167,9 @@ footer .fa-sass {
 }
 footer .fa-html5 {
   color: #f06529;
+}
+footer .made {
+  font-size: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
