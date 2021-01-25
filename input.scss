@@ -167,7 +167,6 @@ article{
 }
 .jumbotron{
     background-image: url("img/danny-howe-bn-D2bCvpik-unsplash.jpg");
-    background-color:$color-accent;
     box-shadow: 0px 0px 10px 20px  black inset;
     height: 50vh;
     background-position: center;
@@ -212,3 +211,32 @@ footer{
 // =========================================
 // Placeholder for @extend
 // =========================================
+
+
+// =========================================
+// MODAL
+// =========================================
+.modal{
+    // display: inline;
+    // position: fixed;
+    z-index: 1;
+    width: 60vw;
+    height: auto;
+    overflow: hidden;
+    background-color:$color-accent;
+    color: $color-main;
+    font-family:$font-heading;
+    font-size: 3rem;
+    letter-spacing: .25rem;
+    margin:auto;
+    text-align: center;
+    padding-bottom:2rem;
+    border-radius: 25px;
+        #email{
+            border:2px solid $color-accent-dark;
+        }
+        p{
+            font-size:1rem;
+            letter-spacing:normal;
+        }
+}
