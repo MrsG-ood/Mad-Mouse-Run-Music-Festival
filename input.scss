@@ -144,7 +144,7 @@ footer{
 // =========================================
 .cardimg{
     width: 60vw;
-    max-width: 450px;
+    max-width: 350px;
    margin:1rem;
 }
 article{
@@ -157,6 +157,7 @@ article{
     background-color: $color-accent;
     color: $color-main;
     @include centerPadding();
+    width: 100%;
 }
 .card{
     width:75vw;
@@ -167,8 +168,9 @@ article{
 .eachCard{
     @include cardGrid;
     margin:2rem;
-    border: 5px solid $color-accent-dark;
-   max-width:500px;
+    background-color:rgb(39, 39, 39);
+    // border-bottom: 3px solid $color-accent;
+   max-width:400px;
 }
 .jumbotron{
     background-image: url("img/danny-howe-bn-D2bCvpik-unsplash.jpg");
@@ -249,8 +251,12 @@ footer{
                     border:2px solid $color-accent-dark;
                 }
                 p{
-                    font-size:1rem;
+                    font-size:.8rem;
                     letter-spacing:normal;
+                    margin:0;
+                }
+                #close{
+                    line-height:normal;
                 }
         }
 }
