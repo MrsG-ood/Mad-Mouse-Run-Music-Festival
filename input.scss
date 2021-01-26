@@ -25,6 +25,11 @@ $halfRem: .5rem;
 
 
 $shadow-drop:5px 5px 10px $color-main;
+
+// :export{
+//    things to export to JS if needed.
+// }
+
 // =========================================
 // @mixins  use @include to use the mixin
 // =========================================
@@ -177,8 +182,6 @@ article{
     z-index: -1;
   
 }
-
-
 // =========================================
 // Footer Icons
 // =========================================
@@ -200,13 +203,13 @@ footer{
     .fa-html5{
         color:$html5-color;
     }
+    .fa-js{
+        color:#f7e018;
+    }
     .made{
         font-size: 1.25rem;
     }
 }
-
-
-
 
 // =========================================
 // Placeholder for @extend
@@ -214,29 +217,40 @@ footer{
 
 
 // =========================================
-// MODAL
+// MODAL > click function in Javascript to display and close Modal.
 // =========================================
-.modal{
-    // display: inline;
-    // position: fixed;
+#modalContainer{
+    display:none;
+    position: fixed;
     z-index: 1;
-    width: 60vw;
-    height: auto;
-    overflow: hidden;
-    background-color:$color-accent;
-    color: $color-main;
-    font-family:$font-heading;
-    font-size: 3rem;
-    letter-spacing: .25rem;
-    margin:auto;
-    text-align: center;
-    padding-bottom:2rem;
-    border-radius: 25px;
-        #email{
-            border:2px solid $color-accent-dark;
-        }
-        p{
-            font-size:1rem;
-            letter-spacing:normal;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    overflow:auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+        #modal{
+            z-index:1;
+            width: 60vw;
+            height: auto;
+            overflow: hidden;
+            background-color:$color-accent;
+            color: $color-main;
+            font-family:$font-heading;
+            font-size: 3rem;
+            letter-spacing: .25rem;
+            margin:auto;
+            text-align: center;
+            padding-bottom:2rem;
+            border-radius: 25px;
+            margin: 15% auto;
+                #email{
+                    border:2px solid $color-accent-dark;
+                }
+                p{
+                    font-size:1rem;
+                    letter-spacing:normal;
+                }
         }
 }
